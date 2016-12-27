@@ -196,4 +196,302 @@ public class CDownload_Manager : MonoBehaviour {
             _FinishDownload(true, data);
         }
     }
+
+    /// <summary>
+    /// 이재성
+    /// 2016-12-27
+    /// 그룹 버전 다운로드
+    /// </summary>
+    /// <param name="_FinishDownload"></param>
+    /// <returns></returns>
+    public IEnumerator download_group_ver(finish_download _FinishDownload)
+    {
+        using (WWW www = new WWW("http://lu01-vz3647.ktics.co.kr/ay_group_ver.dat"))
+        {
+            while (!www.isDone)
+            {
+                yield return null;
+            }
+            yield return www;
+            if (null != www.error)
+            {
+                throw new System.Exception("WWW download:" + www.error);
+            }
+            byte[] data = www.bytes;
+            _FinishDownload(true, data);
+        }
+    }
+
+    /// <summary>
+    /// 이재성
+    /// 2016-12-27
+    /// 그룹 다운로드
+    /// </summary>
+    /// <param name="_Ver"></param>
+    /// <param name="_FinishDownload"></param>
+    /// <returns></returns>
+    public IEnumerator download_group(int _Ver, finish_download _FinishDownload)
+    {
+        string _FileName = string.Format("http://lu01-vz3647.ktics.co.kr/ay_group_{0:0000000}.dat", _Ver);
+        using (WWW www = new WWW(_FileName))
+        {
+            while (!www.isDone)
+            {
+                yield return null;
+            }
+            yield return www;
+            if (null != www.error)
+            {
+                throw new System.Exception("WWW download:" + www.error);
+            }
+            byte[] data = www.bytes;
+            _FinishDownload(true, data);
+        }
+    }
+
+    /// <summary>
+    /// 이재성
+    /// 2016-12-27
+    /// 명소 버전 다운로드
+    /// </summary>
+    /// <param name="_FinishDownload"></param>
+    /// <returns></returns>
+    public IEnumerator download_attraction_ver(finish_download _FinishDownload)
+    {
+        using (WWW www = new WWW("http://lu01-vz3647.ktics.co.kr/ay_attraction_ver.dat"))
+        {
+            while (!www.isDone)
+            {
+                yield return null;
+            }
+            yield return www;
+            if (null != www.error)
+            {
+                throw new System.Exception("WWW download:" + www.error);
+            }
+            byte[] data = www.bytes;
+            _FinishDownload(true, data);
+        }
+    }
+
+    /// <summary>
+    /// 이재성
+    /// 2016-12-27
+    /// 명소 다운로드
+    /// </summary>
+    /// <param name="_Ver"></param>
+    /// <param name="_FinishDownload"></param>
+    /// <returns></returns>
+    public IEnumerator download_attraction(int _Ver, finish_download _FinishDownload)
+    {
+        string _FileName = string.Format("http://lu01-vz3647.ktics.co.kr/ay_attraction_{0:0000000}.dat", _Ver);
+        using (WWW www = new WWW(_FileName))
+        {
+            while (!www.isDone)
+            {
+                yield return null;
+            }
+            yield return www;
+            if (null != www.error)
+            {
+                throw new System.Exception("WWW download:" + www.error);
+            }
+            byte[] data = www.bytes;
+            _FinishDownload(true, data);
+        }
+    }
+
+    /// <summary>
+    /// 이재성
+    /// 2016-12-27
+    /// 게이트 버전 다운로드
+    /// </summary>
+    /// <param name="_FinishDownload"></param>
+    /// <returns></returns>
+    public IEnumerator download_gate_ver(finish_download _FinishDownload)
+    {
+        using (WWW www = new WWW("http://lu01-vz3647.ktics.co.kr/ay_gate_ver.dat"))
+        {
+            while (!www.isDone)
+            {
+                yield return null;
+            }
+            yield return www;
+            if (null != www.error)
+            {
+                throw new System.Exception("WWW download:" + www.error);
+            }
+            byte[] data = www.bytes;
+            _FinishDownload(true, data);
+        }
+    }
+
+    /// <summary>
+    /// 이재성
+    /// 2016-12-27
+    /// 게이트 다운로드
+    /// </summary>
+    /// <param name="_Ver"></param>
+    /// <param name="_FinishDownload"></param>
+    /// <returns></returns>
+    public IEnumerator download_gate(int _Ver, finish_download _FinishDownload)
+    {
+        string _FileName = string.Format("http://lu01-vz3647.ktics.co.kr/ay_gate_{0:0000000}.dat", _Ver);
+        using (WWW www = new WWW(_FileName))
+        {
+            while (!www.isDone)
+            {
+                yield return null;
+            }
+            yield return www;
+            if (null != www.error)
+            {
+                throw new System.Exception("WWW download:" + www.error);
+            }
+            byte[] data = www.bytes;
+            _FinishDownload(true, data);
+        }
+    }
+
+    public IEnumerator download_facilities_code_ver(finish_download _FinishDownload)
+    {
+        using (WWW www = new WWW("http://lu01-vz3647.ktics.co.kr/ay_facilities_code_ver.dat"))
+        {
+            while (!www.isDone)
+            {
+                yield return null;
+            }
+            yield return www;
+            if (null != www.error)
+            {
+                throw new System.Exception("WWW download:" + www.error);
+            }
+            byte[] data = www.bytes;
+            _FinishDownload(true, data);
+        }
+    }
+
+    public IEnumerator download_facilities_code(int _Ver, finish_download _FinishDownload)
+    {
+        string _FileName = string.Format("http://lu01-vz3647.ktics.co.kr/ay_facilities_code_{0:0000000}.dat", _Ver);
+        using (WWW www = new WWW(_FileName))
+        {
+            while (!www.isDone)
+            {
+                yield return null;
+            }
+            yield return www;
+            if (null != www.error)
+            {
+                throw new System.Exception("WWW download:" + www.error);
+            }
+            byte[] data = www.bytes;
+            _FinishDownload(true, data);
+        }
+    }
+
+
+    /// <summary>
+    /// 이재성
+    /// 2016-12-27
+    /// 편의시설 버전 다운로드
+    /// </summary>
+    /// <param name="_FinishDownload"></param>
+    /// <returns></returns>
+    public IEnumerator download_facilities_ver(finish_download _FinishDownload)
+    {
+        using (WWW www = new WWW("http://lu01-vz3647.ktics.co.kr/ay_facilities_ver.dat"))
+        {
+            while (!www.isDone)
+            {
+                yield return null;
+            }
+            yield return www;
+            if (null != www.error)
+            {
+                throw new System.Exception("WWW download:" + www.error);
+            }
+            byte[] data = www.bytes;
+            _FinishDownload(true, data);
+        }
+    }
+
+    /// <summary>
+    /// 이재성
+    /// 2016-12-27
+    /// 편의시설 다운로드
+    /// </summary>
+    /// <param name="_Ver"></param>
+    /// <param name="_FinishDownload"></param>
+    /// <returns></returns>
+    public IEnumerator download_facilities(int _Ver, finish_download _FinishDownload)
+    {
+        string _FileName = string.Format("http://lu01-vz3647.ktics.co.kr/ay_facilities_{0:0000000}.dat", _Ver);
+        using (WWW www = new WWW(_FileName))
+        {
+            while (!www.isDone)
+            {
+                yield return null;
+            }
+            yield return www;
+            if (null != www.error)
+            {
+                throw new System.Exception("WWW download:" + www.error);
+            }
+            byte[] data = www.bytes;
+            _FinishDownload(true, data);
+        }
+    }
+
+    /// <summary>
+    /// 이재성
+    /// 2016-12-27
+    /// 이벤트 게이트 버전 다운로드
+    /// </summary>
+    /// <param name="_FinishDownload"></param>
+    /// <returns></returns>
+    public IEnumerator download_event_gate_ver(finish_download _FinishDownload)
+    {
+        using (WWW www = new WWW("http://lu01-vz3647.ktics.co.kr/ay_event_gate_ver.dat"))
+        {
+            while (!www.isDone)
+            {
+                yield return null;
+            }
+            yield return www;
+            if (null != www.error)
+            {
+                throw new System.Exception("WWW download:" + www.error);
+            }
+            byte[] data = www.bytes;
+            _FinishDownload(true, data);
+        }
+    }
+
+    /// <summary>
+    /// 이재성
+    /// 2016-12-27
+    /// 이벤트 게이트 다운로드
+    /// </summary>
+    /// <param name="_Ver"></param>
+    /// <param name="_FinishDownload"></param>
+    /// <returns></returns>
+    public IEnumerator download_event_gate(int _Ver, finish_download _FinishDownload)
+    {
+        string _FileName = string.Format("http://lu01-vz3647.ktics.co.kr/ay_event_gate_{0:0000000}.dat", _Ver);
+        using (WWW www = new WWW(_FileName))
+        {
+            while (!www.isDone)
+            {
+                yield return null;
+            }
+            yield return www;
+            if (null != www.error)
+            {
+                throw new System.Exception("WWW download:" + www.error);
+            }
+            byte[] data = www.bytes;
+            _FinishDownload(true, data);
+        }
+    }
 }

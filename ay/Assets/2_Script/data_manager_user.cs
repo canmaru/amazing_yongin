@@ -20,6 +20,6 @@ public partial class data_manager {
         Read(data, out temp.exp);
         Read(data, out temp.exp_max_lev);
         Read(data, out temp.atk);
-        set_download_state(DownLoadState.DOWNLOAD_FINISH);
+        set_download_state(DownLoadState.DOWNLOAD_GROUP_VERSION);
     }
 }
